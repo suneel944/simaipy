@@ -1,0 +1,51 @@
+[project]
+name = "simaipy"
+version = "0.1.0"
+description = "Simple Playwright-based AI / LLM chat bot testing framework"
+requires-python = ">=3.11"
+dependencies = [
+    "PyYAML>=6.0.0",
+    "pytest>=8.4.2",
+    "playwright>=1.56.0",
+    "pytest-playwright>=0.7.1",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.1",
+]
+
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Suneel Kaushik Subramanya", email = "suneel944@gmail.com" },
+]
+keywords = ["llm", "testing", "playwright", "chatbot", "automation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.urls]
+Repository = "https://github.com/suneel944/simaipy"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "mypy>=1.8.0",
+    "types-PyYAML>=6.0.12",
+    "types-requests>=2.32.0",
+    "requests>=2.32.0",
+    "sentence-transformers>=2.2.0",
+]
+
+[project.scripts]
+simaipy = "simaipy.cli:main"
+
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["simaipy"]
